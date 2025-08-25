@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Fantasy</title>
+  </head>
+  <body>
+    <header>
+      <h1>Dark Fantasy Comic-Style Mini Stories</h1>
+    </header>
+
+    <main>
+      <hr />
+      <br />
+      <div class="panel">
+        <h2>“Whispers in the Fog”</h2>
+        <div>
+          <p>
+            The village lay silent, cloaked in a fog so thick it swallowed the
+            moonlight. Children claimed the mist carried voices, but tonight
+            even the wolves were too afraid to howl. The air reeked of iron and
+            wet earth, as though the ground itself had been freshly opened.
+          </p>
+          <img
+            src="./img/silent_village.png"
+            alt="Silent village"
+            width="500"
+          />
+        </div>
+      </div>
+
+      <hr />
+      <br />
+      <div>
+        <h2>“The Broken Blade”</h2>
+        <div>
+          <p>
+            In the tavern’s ruins, a knight sat slumped against a charred beam,
+            clutching a shattered sword. Its edge still dripped with shadows,
+            not blood. Each blink brought back the battlefield—flames writhing
+            like serpents, comrades falling with hollow eyes, and the sound of a
+            hymn sung backward.
+          </p>
+          <img src="./img/broken_blade.png" alt="Broken blade" width="500" />
+        </div>
+      </div>
+
+      <hr />
+      <br />
+      <div>
+        <h2>“The Last Door”</h2>
+        <div>
+          <p>
+            At the forest’s edge, an ancient door stood without walls, its frame
+            twisted from roots and bone. Its surface pulsed faintly, as though
+            it were alive. Behind it whispered promises of lost souls—voices of
+            friends long buried, calling him closer. His hand trembled as it
+            reached for the handle.
+          </p>
+          <img src="./img/last_door.png" alt="Last door" width="500" />
+        </div>
+      </div>
+    </main>
+
+    <br />
+    <hr />
+
+    <h3>Rate the comics</h3>
+    <form>
+      <ul>
+        <li>
+          <div>0-10: <input type="number" min="0" max="10" /></div>
+        </li>
+
+        <li>
+          <div>
+            Choose one:
+            <select name="rate" id="rate">
+              <option value="rock bottom">Rock Bottom</option>
+              <option value="not bad">Not Bad</option>
+              <option value="nice">Nice</option>
+              <option value="perfect">Perfect</option>
+            </select>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            Choose one:
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  id="brother"
+                  name="brother_uh"
+                  value="Brother, uh"
+                />
+                <label for="brother">Brother, uh</label><br />
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  id="fine"
+                  name="fine_choice"
+                  value="Fine choice"
+                />
+                <label for="fine">Fine choice, sir</label><br />
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  id="amazing"
+                  name="amazing, baby"
+                  value="Amazing, baby"
+                />
+                <label for="amazing">That's amazing, babyyyy</label><br />
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <button
+        type="submit"
+        onclick="alert('Thank you for your rating, kind sir!')"
+      >
+        Rate
+      </button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h4>Previous comics</h4>
+    <ul>
+      <li><a href="../lesson_1/index.html">Lesson 1 comics</a></li>
+    </ul>
+
+    <hr />
+
+    <footer>
+      <p>El-Dimaron</p>
+    </footer>
+  </body>
+</html>
