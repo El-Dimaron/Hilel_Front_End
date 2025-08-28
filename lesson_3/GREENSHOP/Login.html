@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <div style="text-align: center">
+        <h2>
+          <span class="text-success">Login</span> |
+          <a
+            style="text-decoration: none; color: grey"
+            href="./Registration.html"
+            >Register</a
+          >
+        </h2>
+
+        <br />
+        <p>Enter your email and password to login.</p>
+
+        <form>
+          <ul style="list-style-type: none; padding: 0">
+            <li><input type="text" placeholder="Username" /></li>
+            <li><input type="password" placeholder="Password" /></li>
+            <br />
+            <li>
+              <button
+                class="btn btn-success"
+                type="submit"
+                onclick="alert('You have been successfully logged in, kind sir!')"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </form>
+
+        <p>--------Or login via--------</p>
+
+        <ul style="list-style-type: none; padding: 0">
+          <li>
+            <a href="https://www.google.com/" class="btn btn-outline-secondary">
+              <img
+                src="./img/google_logo.png"
+                alt="Google logo"
+                style="width: 20px"
+              />
+              Continue with Google
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              class="btn btn-outline-secondary"
+            >
+              <img
+                src="./img/facebook_logo.png"
+                alt="Facebook logo"
+                style="width: 20px"
+              />
+              Continue with Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
