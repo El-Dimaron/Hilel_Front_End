@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-background">
+      <div class="container-inner">
+        <div class="container-payment">
+          <ul class="ulist-avatar">
+            <li>
+              <img src="./img/avatar.png" alt="Avatar" class="image-avatar" />
+            </li>
+            <li><h3>Payment Info</h3></li>
+            <li>Payment Info</li>
+          </ul>
+        </div>
+
+        <div class="container-form">
+          <form action="">
+            <div class="container-input">
+              <h4>Full Name</h4>
+              <input class="input-text" type="text" placeholder="Alex Smith" />
+            </div>
+
+            <div class="container-input">
+              <h4>Credit Card Number</h4>
+              <input
+                class="input-cc"
+                type="number"
+                placeholder="1234 1234 1234 1234"
+              />
+            </div>
+
+            <div class="container-input-horizontal">
+              <div style="margin-right: 4%">
+                <h4>Exp Date</h4>
+                <input class="input-cc" type="datetime" placeholder="MM/YY" />
+              </div>
+              <div style="margin-left: 4%">
+                <h4>CVV</h4>
+                <input class="input-cc" type="number" placeholder="..." />
+              </div>
+            </div>
+
+            <div class="container-input">
+              <h4>Zip Code</h4>
+              <input class="input-cc" type="number" placeholder="90210" />
+            </div>
+
+            <div class="container-input">
+              <button
+                class="button-confirm"
+                type="submit"
+                onclick="alert('Thank you for your payment, kind sir!')"
+              >
+                Confirm Payment
+              </button>
+            </div>
+
+            <div class="container-input-bottom">
+              <p class="text-bottom">You verify that this info is correct</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

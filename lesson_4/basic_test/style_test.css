@@ -1,0 +1,19 @@
+h1 {
+  color: rgb(2, 59, 109);
+}
+
+p {
+  color: rgb(68, 56, 141);
+  background-color: rgb(208, 231, 248);
+}
+
+.dark-paragraph {
+  color: rgb(255, 255, 255);
+  background-color: rgb(62, 24, 97);
+}
+
+.input-text {
+  border-width: 2px;
+  border-color: aqua;
+  border-style: dashed;
+}
