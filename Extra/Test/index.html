@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Test Project</title>
+  </head>
+  <body>
+    <div class="background">
+      <h1></h1>
+      <div class="image-container">
+        <button class="arrow left">&#8592;</button>
+        <img src="./images/homelander_1.png" alt="Homelander" />
+        <button class="arrow right">&#8594;</button>
+      </div>
+    </div>
+
+    <form>
+      <label for="fname">Ім'я:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Прізвище:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Надіслати" />
+    </form>
+
+    <form>
+      <label for="fname">Ім'я:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <input type="hidden" id="custId" name="custId" value="3487" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <form>
+      <label for="vol">Гучність (від 0 до 50):</label>
+      <input type="range" id="vol" name="vol" min="0" max="50" value="50" />
+    </form>
+
+    <form>
+      <label for="gsearch">Пошук у Google:</label>
+      <input type="search" id="gsearch" name="gsearch" />
+    </form>
+
+    <form>
+      <label for="homepage">Додайте свою домашню сторінку:</label>
+      <input type="url" id="homepage" name="homepage" />
+    </form>
+
+    <form>
+      <label for="country_code">Код країни:</label>
+      <input
+        type="text"
+        id="country_code"
+        name="country_code"
+        pattern="[A-Za-z]{3}"
+        title="Трибуквений код країни"
+      />
+    </form>
+
+    <form>
+      <label for="fname">Ім'я:</label><br />
+      <input type="text" id="fname" name="fname" autofocus /><br />
+      <label for="lname">Прізвище:</label><br />
+      <input type="text" id="lname" name="lname" />
+    </form>
+
+    <form>
+      <input list="браузери" />
+      <datalist id="браузери">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+    </form>
+
+    <div
+      class="test"
+      style="
+        background-color: aqua;
+        border: black solid 2px;
+        margin: 10px;
+        padding: 50px;
+        box-sizing: border-box;
+      "
+    >
+      Test
+    </div>
+
+    <div
+      class="test"
+      style="
+        width: 500px;
+        background-color: aqua;
+        border: black solid 2px;
+        margin: 10px;
+        padding: 5px;
+        box-sizing: border-box;
+      "
+    >
+      Test
+    </div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

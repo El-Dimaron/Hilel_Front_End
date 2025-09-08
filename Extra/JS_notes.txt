@@ -1,0 +1,524 @@
+JavaScript Basics
+
+JS файл можна підключити до html документу за допомогою тегу <script>:
+    <script src="./scripts/main.js"></script>
+
+Тег потрібно додавати внизу html файлу - в кінці тегу <body>.
+    Робиться це через те, що HTML завантажується у порядку появи його у файлі.
+    Якщо JavaScript завантажується першим і йому потрібно взаємодіяти з HTML нижче за нього, він не зможе працювати,
+    бо JavaScript буде завантажений раніше, ніж HTML, з яким потрібно працювати.
+
+Альтернативно, JS код можна писати напряму в html документі, використовуючи тег <script></script> без атрибуту scr.
+    <script>
+    let myHeading = document.querySelector('h1'); 
+    myHeading.textContent = 'Привіт, Світ!';
+    </script>
+
+
+
+Variables (змінні)
+
+Ви починаєте оголошувати змінну з ключовим словом let (або var), за яким слідує будь-яке ім'я, яким ви захочете її назвати:
+    let myVariable;
+
+
+Naming rules and conventions
+
+    Rules (must follow)
+
+        Allowed characters:
+            - Letters (a–z, A–Z)
+            - Digits (0–9) — but not at the beginning
+            - Underscore (_)
+            - Dollar sign ($)
+
+                let name1;   // valid
+                let _value;  // valid
+                let $price;  // valid
+                let 1age;    // ❌ invalid (cannot start with digit)
+
+        Case-sensitive:
+            userName and username are two different variables.
+
+        No reserved keywords:
+            You can’t name variables let, class, return, if, etc.
+
+        Unicode is allowed:
+            Technically you can use emojis or non-Latin letters:
+
+            let café = "coffee"; 
+            let 🚀 = "rocket";
+
+            But this is discouraged for maintainability.
+
+    Conventions (best practices)
+
+        camelCase for variables and functions:
+            let firstName = "John";
+            function getUserData() {}
+
+        PascalCase for classes and constructors:
+            class UserProfile {}
+
+        UPPER_CASE with underscores for constants that never change:
+            const MAX_SPEED = 120;
+
+        Meaningful, descriptive names:
+            let priceAfterDiscount;   // good
+            let pad;                  // ❌ unclear
+
+        Booleans start with is, has, can, should:
+            let isAvailable = true;
+            let hasPermission = false;
+
+        Avoid one-letter names, except for small loops:
+            for (let i = 0; i < 10; i++) {}
+
+        Consistency across the project is key - if your team uses camelCase everywhere, stick with it.
+
+
+Всі інструкції в JS мають закінчуватись точкою з комою:
+    var testVariable = "Test";
+
+Змінну можна оголосити однією командою, а надати значення іншою.
+    var testVariable;
+    testVariable = "Test";
+
+Після встановлення значення змінної ви можете змінити його пізніше:
+    var testVariable = "Test";
+    testVariable = "Test 2.0";
+
+
+Для визначення змінної можна використовувати ключові слова 'var' або 'let'.
+
+In modern JavaScript you’ll usually see let (and const) instead of var. They all declare variables, but they behave differently.
+
+var
+
+    Function-scoped
+        If declared inside a function, it’s only visible in that function.
+        But if declared inside a block (if, for, {}), it “escapes” the block.
+
+        if (true) {
+            var x = 10;
+        }
+        console.log(x); // ✅ 10 (leaks out of block)
+
+    Hoisted & initialized with undefined
+        The declaration is moved (“hoisted”) to the top of its scope, so you can reference it before definition (though it’s undefined).
+
+        console.log(y); // undefined
+        var y = 5;
+
+let (modern, ES6+)
+
+    Block-scoped
+        Stays inside {} where it was declared.
+        if (true) {
+            let a = 20;
+        }
+        console.log(a); // ❌ ReferenceError
+
+    Hoisted but not initialized
+        Exists in a temporal dead zone until execution reaches its declaration.
+
+        console.log(b); // ❌ ReferenceError
+        let b = 30;
+    
+
+Why use let/const instead of var?
+    - Clearer scoping → avoids bugs from leaking variables.
+    - Predictable behavior → no accidental hoisting surprises.
+    - Modern standard → almost all style guides recommend:
+        - Default to const
+        - Use let if reassignment is needed
+        - Avoid var (only use it for legacy code).
+
+So using let is the modern, best practice way of declaring variables.
+
+
+
+alert()
+
+alert() is a built-in JavaScript function that shows a modal dialog box with a message and an OK button.
+    It’s mainly used for quick debugging or simple notifications in the browser.
+    It pauses script execution until the user clicks OK.
+    Example:
+        alert("Hello, world!");
+
+        This will pop up a small dialog with Hello, world!.
+
+
+
+Data Types
+
+    Primitive Types - stored directly in memory as a single value.
+
+        String → text data
+            let name = "Alice";
+            let greeting = 'Hello';
+            let sentence = `Hi, ${name}`; // template literal
+
+        Number → all numbers (integers, floats, etc.)
+            let age = 25;
+            let price = 19.99;
+            let notANumber = NaN;  // special "Not a Number"
+            let infinity = Infinity;
+
+        BigInt → very large integers (added in ES2020)
+            let big = 1234567890123456789012345678901234567890n;
+
+        Boolean → logical true/false
+            let isActive = true;
+            let hasPermission = false;
+
+        Undefined → a variable declared but not assigned a value
+            let x;
+            console.log(x); // undefined
+
+        Null → intentional "empty" value
+            let user = null; // means "no user"
+
+        Symbol → unique identifiers (often for object keys)
+            let sym1 = Symbol("id");
+            let sym2 = Symbol("id");
+            console.log(sym1 === sym2); // false
+
+
+    Reference Types (Objects) - stored by reference, not by value.
+
+        Array → ordered list of values
+            let colors = ["red", "green", "blue"];
+        
+        Object → collections of key–value pairs
+            let user = {name: "Alice", age: 25};
+
+        Function → callable objects
+            function greet() { console.log("Hello"); }
+
+        Date, RegExp, Map, Set, WeakMap, WeakSet, etc. → special built-in objects.
+
+
+Special Notes
+
+JavaScript is dynamically typed: you don’t declare a variable’s type, it’s determined at runtime.
+    let value = 42;       // number
+    value = "forty two";  // now string
+
+You can check a type with typeof:
+    typeof 123;       // "number"
+    typeof "hello";   // "string"
+    typeof null;      // "object" (quirk in JS)
+    typeof [];        // "object"
+    typeof (()=>{});  // "function"
+
+
+Comments in JS
+    // → quick inline notes
+    /* ... */ → block/multi-line comments
+
+
+
+Operators
+
+Operators let you perform actions on values and variables.
+
+Categories of JavaScript Operators
+    1️⃣ Arithmetic Operators (numbers)
+        let x = 10, y = 3;
+
+        x + y;  // 13 (addition)
+        x - y;  // 7  (subtraction)
+        x * y;  // 30 (multiplication)
+        x / y;  // 3.333... (division)
+        x % y;  // 1  (modulus → remainder)
+        x ** y; // 1000 (exponentiation → 10^3)
+    
+    2️⃣ Assignment Operators
+        let a = 5;
+
+        a += 2; // 7 (same as a = a + 2)
+        a -= 2; // 5
+        a *= 2; // 10
+        a /= 2; // 5
+        a %= 2; // 1
+        a **= 2; // 1 (same as a = a ** 2)
+    
+    3️⃣ Comparison Operators (return true or false)
+        5 == "5";   // true  (loose equality, type conversion)
+        5 === "5";  // false (strict equality, no type conversion)
+        5 != "5";   // false
+        5 !== "5";  // true
+
+        10 > 5;   // true
+        10 < 5;   // false
+        10 >= 10; // true
+        10 <= 9;  // false
+
+    4️⃣ Logical Operators
+        true && false; // false (AND)
+        true || false; // true  (OR)
+        !true;         // false (NOT)
+
+    5️⃣ Unary Operators (does not reassign the variable)
+        let n = 5;
+        +n; // 5   (plus does nothing special here)
+        -n; // -5  (negation)
+
+        typeof n; // "number"
+        delete obj.prop; // removes a property
+
+    6️⃣ Increment / Decrement
+        let i = 0;
+
+        i++; // post-increment → returns 0, then i = 1
+        ++i; // pre-increment → i = 1, returns 1
+
+        i--; // post-decrement
+        --i; // pre-decrement
+
+    7️⃣ Ternary Operator (Conditional)
+        let age = 18;
+        let status = (age >= 18) ? "Adult" : "Minor"; // "Adult"
+
+    8️⃣ String Operators
+        "Hello" + " " + "World"; // "Hello World"
+        "Hi" + 5; // "Hi5" (number converted to string)
+
+
+
+
+Conditions
+
+    1️⃣ if statement - executes code if the condition is true.
+        let age = 18;
+
+        if (age >= 18) {
+            console.log("You are an adult.");
+        }
+
+    2️⃣ if…else - provides an alternative if the condition is false.
+        let age = 16;
+
+        if (age >= 18) {
+            console.log("Adult");
+        } else {
+            console.log("Minor");
+        }
+    
+    3️⃣ if…else if…else - checks multiple conditions in order.
+        let score = 75;
+
+        if (score >= 90) {
+            console.log("Grade A");
+        } else if (score >= 70) {
+            console.log("Grade B");
+        } else {
+            console.log("Grade C");
+        }
+    
+    4️⃣ switch statement - used when you have many possible values for one variable.
+        let day = 3;
+
+        switch (day) {
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        default:
+            console.log("Another day");
+        }
+    
+    5️⃣ Truthy and Falsy values
+        In JavaScript, conditions don’t need to be strictly true or false.
+
+        Values considered falsy:
+            - false
+            - 0
+            - "" (empty string)
+            - null
+            - undefined
+            - NaN
+
+        Everything else is truthy.
+
+    6️⃣ Logical operators in conditions
+        let age = 25;
+        let hasTicket = true;
+
+        if (age >= 18 && hasTicket) {
+        console.log("Can enter the concert");
+        }
+
+        if (age < 18 || !hasTicket) {
+        console.log("Cannot enter");
+        }
+
+
+
+Functions
+
+    1️⃣ Function Basics
+
+        A function is a block of code that can be defined once and called multiple times.
+
+            function greet() {
+                console.log("Hello!");
+            }
+
+            greet(); // "Hello!"
+            greet(); // "Hello!"
+
+    2️⃣ Function with Parameters
+
+        Functions can take parameters (inputs) and return results.
+
+            function add(a, b) {
+                return a + b;
+            }
+
+            let sum = add(5, 3); // 8
+            console.log(sum);
+
+    3️⃣ Default Parameters
+
+        You can set default values.
+
+            function greet(name = "Guest") {
+                console.log("Hello, " + name);
+            }
+
+            greet("Alice"); // "Hello, Alice"
+            greet();        // "Hello, Guest"
+        
+    4️⃣ Function Expressions
+
+        You can also assign a function to a variable.
+
+            let multiply = function (x, y) {
+                return x * y;
+            };
+
+            console.log(multiply(3, 4)); // 12
+
+    5️⃣ Arrow Functions (ES6+)
+
+        Shorter syntax, often used for callbacks.
+
+            const divide = (x, y) => x / y;
+            console.log(divide(10, 2)); // 5
+
+        Special cases:
+
+        One parameter → no parentheses needed
+            const square = n => n * n;
+
+        No parameters → use ()
+            const hello = () => console.log("Hello!");
+
+    6️⃣ Anonymous Functions
+
+        Functions without a name, often passed as arguments.
+            setTimeout(function () {
+                console.log("This runs after 1 second");
+            }, 1000);
+
+        Arrow function version:
+            setTimeout(() => console.log("Arrow style"), 1000);
+
+    7️⃣ Returning Values
+
+        Functions can return something, or nothing (in which case they return undefined).
+            function getAge() {
+                return 25;
+            }
+            console.log(getAge()); // 25
+
+    8️⃣ Nested Functions & Scope
+
+        Functions can be defined inside other functions.
+
+            function outer() {
+                let outerVar = "I’m outer";
+
+                    function inner() {
+                        console.log(outerVar); // can access outer variables
+                    }
+
+                inner();
+            }
+
+            outer(); // "I’m outer"
+
+
+
+Events
+
+Events are how JavaScript interacts with the browser and user actions.
+
+Think of an event as:
+    “Something happened” → a click, a keypress, a page load, etc.
+    You write code that listens for the event and then runs a function (the event handler).
+
+    1️⃣ Common Event Types
+        🖱️ Mouse Events
+            click → when an element is clicked
+            dblclick → double click
+            mouseover / mouseout → cursor enters/leaves element
+            mousedown / mouseup → mouse button pressed/released
+            mousemove → cursor moves
+
+        ⌨️ Keyboard Events
+            keydown → when a key is pressed
+            keyup → when a key is released
+            keypress → (deprecated, but used for character input)
+
+        📄 Form Events
+            submit → form submitted
+            change → input/select value changed
+            focus / blur → element gains/loses focus
+            input → user types into a field
+
+        🌐 Window/Document Events
+            load → page fully loaded
+            resize → window resized
+            scroll → page scrolled
+            DOMContentLoaded → DOM ready (before images/scripts loaded)
+
+    2️⃣ Adding Events
+        1. Inline (not recommended for big projects)
+            <button onclick="alert('Clicked!')">Click me</button>
+
+        2. DOM property (DOM element is basically a JavaScript object that represents an HTML tag)
+            const btn = document.querySelector("button");
+                btn.onclick = function () {
+                alert("Button clicked!");
+            };
+
+        3. addEventListener (best practice ✅)
+            const btn = document.querySelector("button");
+            btn.addEventListener("click", () => {
+                alert("Button clicked!");
+            });
+    
+    3️⃣ Event Object
+        When an event happens, the browser creates an event object with details (mouse position, key pressed, etc.).
+
+        document.addEventListener("keydown", function (event) {
+            console.log("Key pressed:", event.key);
+        });
+    
+    4️⃣ Removing Events
+        function greet() {
+            console.log("Hi!");
+        }
+
+        btn.addEventListener("click", greet);
+        btn.removeEventListener("click", greet);
+    
+    
