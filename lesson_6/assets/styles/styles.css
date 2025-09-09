@@ -1,59 +1,62 @@
-/* Roboto font */
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jua&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 html,
 body {
-  font-family: "Roboto";
-  /* max-width: 1200px; */
+  font-family: "PT Sans";
+  text-align: center;
 }
 
 /* Header */
 
 header {
-  display: flex;
-  justify-content: center;
   margin: 0;
   margin-bottom: 10px;
-  /* width: 80%; */
 }
 
 .header-container {
-  width: 80%;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0;
+  border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-bottom: 1px solid green;
-
-  gap: 150px;
+.header-logo,
+.header-navigation,
+.header-misc {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header-logo {
-  display: inline-flex;
-  align-items: center;
+  text-align: left;
+  margin-right: 230px;
 }
 
-.logo-image {
-  display: block;
-  height: 35px;
+.header-misc {
+  text-align: right;
 }
 
-.header-navigation ul,
-.header-misc ul {
-  display: flex;
-  align-items: center;
+.header-navigation {
+  text-align: center;
+  margin-right: 260px;
 }
 
-.header-navigation ul {
-  gap: 36px;
+.header-navigation li,
+.header-misc li {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.header-misc ul {
-  gap: 12px;
+.header-navigation li {
+  margin-left: 36px;
+}
+.header-misc li {
+  margin-left: 12px;
+}
+
+.header-misc {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .header-navigation-link {
@@ -66,7 +69,7 @@ header {
 .header-navigation-link:hover,
 .header-navigation-link:focus-visible {
   border-bottom: 2px solid green;
-  color: #2c7a40;
+  font-weight: 700;
 }
 
 .header-navigation-button {
@@ -74,31 +77,26 @@ header {
   background-color: white;
 }
 
-.header-misc {
-  display: flex;
-  align-items: center;
+.header-misc img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .icon-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
   width: 30px;
-  height: 30px;
   border-radius: 6px;
   text-decoration: none;
-  padding: 20px;
-}
-
-.icon-button:hover {
-  background: #e8ffed;
 }
 
 .login-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+  line-height: 35px;
 
   width: 100px;
   height: 35px;
@@ -117,19 +115,16 @@ header {
 /* Main Body */
 
 main {
-  display: flex;
-  justify-content: center;
   margin: 0;
   margin-bottom: 10px;
-  /* width: 80%; */
 }
 
 .main-body {
-  width: 80%;
+  width: 1200px;
   height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
   background-image: linear-gradient(
     to bottom right,
     rgba(245, 245, 245, 0),
@@ -138,18 +133,68 @@ main {
 }
 
 .main-body-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  /* justify-content: center; */
-  padding: 0 45px;
+  width: 600px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  padding: 0;
   height: 100%;
 }
 
+.main-body-inner-text {
+  color: #3d3d3d;
+  /* padding-right: 140px; */
+  text-align: left;
+}
+
 .main-body-welcome-title {
-  font-size: 12px;
+  font-size: 14px;
+  /* font-weight: 500; */
+  font-weight: 400;
+  margin-top: 68px;
+  margin-left: 43px;
 }
 
 .main-body-better-planet-title {
-  font-size: 64px;
+  font-size: 70px;
+  font-weight: 900;
+  color: #3d3d3d;
+  margin-top: 7px;
+  margin-left: 40px;
+}
+
+#planet {
+  color: #46a358;
+}
+
+.main-body-inner-text p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #727272;
+  margin-top: 5px;
+  margin-left: 43px;
+}
+
+.shop-button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+  line-height: 35px;
+
+  width: 100px;
+  height: 35px;
+
+  background-color: #46a358;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+
+  margin-top: 44px;
+  margin-left: 41px;
+}
+
+.shop-button:hover {
+  outline: 2px solid #2c7a40;
+  outline-offset: 2px;
 }
