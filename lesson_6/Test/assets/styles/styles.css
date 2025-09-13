@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-color: white;
+}
+
+.header {
+  width: 1120px;
+  height: 43px;
+  line-height: 43px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #484848;
+  text-align: left;
+}
+
+.header-logo,
+.header-nav {
+  display: inline-block;
+  margin-right: 70px;
+}
+
+.header-logo-image {
+  vertical-align: middle;
+}
+
+.header-nav li,
+.sign-in-button {
+  margin-right: 25px;
+}
+
+.header-misc {
+  text-align: right;
+}
+
+.header-logo-image,
+.header-nav,
+.header-misc,
+.header-nav li,
+.header-misc li {
+  display: inline-block;
+}
+
+.header a {
+  text-decoration: none;
+  color: #484848;
+}
+
+.header-nav a:hover,
+.sign-in-button:hover {
+  color: black;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+.sign-up-button {
+  display: inline-block;
+  text-align: center;
+  background-color: #1572d3;
+  border-radius: 8px;
+  color: white !important;
+  width: 125px;
+  height: 43px;
+}
+
+.sign-up-button:hover {
+  outline: 2px solid #1368c2;
+  outline-offset: 2px;
+}

@@ -1,0 +1,183 @@
+Block, inline, inline-Block
+
+    Every HTML element has a default display value, depending on what type of element it is.
+    The two most common display values are block and inline.
+
+Block
+
+    Block elements by default:
+        - stack one after another vertically (!) even if they have space horizontally;
+        - take up 100% of width (of a parent element).
+    Two commonly used block elements are: <p> and <div>.
+
+    Here are the block-level elements in HTML:
+        <address>
+        <article>
+        <aside>
+        <blockquote>
+        <canvas>
+        <dd>
+        <div>
+        <dl>
+        <dt>
+        <fieldset>
+        <figcaption>
+        <figure>
+        <footer>
+        <form>
+        <h1>-<h6>
+        <header>
+        <hr>
+        <li>
+        <main>
+        <nav>
+        <noscript>
+        <ol>
+        <p>
+        <pre>
+        <section>
+        <table>
+        <tfoot>
+        <ul>
+        <video>
+
+
+Inline Elements
+
+    An inline element by default:
+        - only takes up as much width as necessary.
+        - does not start on a new line.
+    
+    You cannot change the height of inline elements (height, vertical margin and *padding will not work).
+
+    *Paddings will change the borders of the element, but the element and it surroundings will still not be affected.
+
+    Example: we can create an inline element <a> and make it look like a button:
+    <a class="test-button" href="#">Test</a>
+    
+    .test-button {
+        background-color: green;
+        color: white;
+        text-decoration: none;
+        padding: 75px 150px;
+    }
+
+    What will happen is:
+        - the horizontal padding will work just fine; but
+        - the vertical padding will make the button look bigger vertically but the button now collides with the objects diretly above and below it,
+        because the vertical padding (or margin) does not work in inline elements.
+
+    Two commonly used block elements are: <a>, <span>, <img> and <input>.
+    Note: An inline element cannot contain a block-level element!
+
+    Here are the inline elements in HTML:
+        <a>
+        <abbr>
+        <acronym>
+        <b>
+        <bdo>
+        <big>
+        <br>
+        <button>
+        <cite>
+        <code>
+        <dfn>
+        <em>
+        <i>
+        <img>
+        <input>
+        <kbd>
+        <label>
+        <map>
+        <object>
+        <output>
+        <q>
+        <samp>
+        <script>
+        <select>
+        <small>
+        <span>
+        <strong>
+        <sub>
+        <sup>
+        <textarea>
+        <time>
+        <tt>
+        <var>
+
+
+Inline Block
+
+    With inline-block you are getting:
+        - the ability to set margin, padding and height the same way as on the block level element; and also
+        - allow elements not to force new lines, so they go next to one another.
+    
+    Note: images even though they are categorized as inline elements, behave like inline-block elements.
+
+
+Таємничий відступ між інлайн-блоками
+При використанні display: inline-block може виникнути таємничий відступ між елементами типу inline-block.
+Це пов'язано з тим, що елементи inline-block в першу чергу розглядаються як inline-елементи, а пробіли (включаючи переноси рядків) в HTML-коді відображаються як невеликий відступ між елементами.
+
+Приклад: В нас є контейнер, який має ширину у 900 пікселів, якщо ми будемо розміщувати три елементи у середені контейнеру по 300px, то очікуємо, що вони ставатимуть поруч один біля одного.
+Але це не зовсім так і в нас виникне проблема.
+
+Для подолання цього таємничого відступу ми можемо використати наступний спосіб:
+1. Встановити розмір шрифту батьківського елемента у 0 значення:
+    .container {
+        width: 900px;
+        font-size: 0;
+    }
+
+2.	Переписати font-size для елементів inline-block:
+    span.box {
+        display: inline-block;
+        width: 300px;
+        padding: 18px;
+        font-size: 20px;
+    }
+
+Таким чином блоки будуть ставати один біля одного, як ми і очікували.
+
+
+
+Box Sizing
+"Box Sizing" визначає, як розраховується ширина і висота елемента, включаючи його вміст, відступи, рамку та зовнішній відступ.
+У стандартному режимі (content-box), ширина елемента обчислюється так, що включає тільки сам вміст.
+
+
+Стандартний режим (content-box)
+    .box {
+    box-sizing: content-box;
+    }
+
+Але, якщо ми змінимо режим на "border-box", то ширина елемента буде включати в себе вміст, відступи та рамку, не додаючи їх до вказаної ширини.
+
+
+Приклад впливу box-sizing на розрахунок ширини:
+    .bar {
+        width: 150px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 5px;
+        box-sizing: content-box;
+    }
+
+У цьому випадку, враховуючи "content-box", фактична ширина елемента буде:
+    фактична ширина = ширина + відступ-зліва + відступ-справа + рамка-зліва + рамка-справа + зовнішній відступ-зліва + зовнішній відступ-справа = 150 + 10 + 10 + 2 + 2 + 5 + 5 = 184 px
+
+Але якщо ми змінимо "box-sizing" на "border-box", то розрахунок ширини буде іншим:
+    .bar {
+        width: 150px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 5px;
+        box-sizing: border-box;
+    }
+
+Тепер фактична ширина елемента буде розрахована як:
+    фактична ширина = ширина = 150 px (тобто відступ і рамка ужимають контент і таким чином ширина блоку залишається 150px)
+
+Таким чином, зміна "box-sizing" дозволяє контролювати, як саме враховується ширина елемента, полегшуючи роботу з макетом та розташуванням елементів на сторінці.
+
+

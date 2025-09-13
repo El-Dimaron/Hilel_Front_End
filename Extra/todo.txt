@@ -4,3 +4,5 @@
     ● CSS Grid.
 
 
+2. Outline is better than the border
+
