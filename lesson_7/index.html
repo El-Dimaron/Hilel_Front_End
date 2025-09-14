@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Greenshop</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a class="header-logo" href="./index.html"
+          ><img
+            class="logo-image"
+            src="./assets/images/logo.png"
+            alt="Greenshop Logo"
+        /></a>
+
+        <nav class="header-navigation">
+          <ul>
+            <li>
+              <a class="header-navigation-link" href="./index.html">Home</a>
+            </li>
+            <li><a class="header-navigation-link" href="#shop">Shop</a></li>
+            <li>
+              <a class="header-navigation-link" href="#">Plant&nbsp;Care</a>
+            </li>
+            <li><a class="header-navigation-link" href="#">Blogs</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-misc">
+          <ul>
+            <li>
+              <a class="icon-button" href="#"
+                ><img src="./assets/images/search.png" alt="Search button"
+              /></a>
+            </li>
+            <li>
+              <a class="icon-button" href="#"
+                ><img src="./assets/images/cart.png" alt="Cart button"
+              /></a>
+            </li>
+            <li>
+              <a href="./login.html" class="header-sign-in-button">Sign in</a>
+            </li>
+            <li>
+              <a href="./register.html" class="header-register-button">
+                <span>Sign up</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-body">
+        <div class="main-body-inner main-body-inner-text">
+          <h3 class="main-body-welcome-title">WELCOME TO GREENSHOP</h3>
+          <h1 class="main-body-better-planet-title">
+            LET'S MAKE A BETTER <span id="planet">PLANET</span>
+          </h1>
+          <p class="main-body-inner-paragraph">
+            We are an online plant shop offering a wide range of cheap and
+            trendy plants. Use our plants to create an unique Urban Jungle.
+            Order your favorite plants!
+          </p>
+          <a href="#" class="shop-button"><span>SHOP NOW</span></a>
+        </div>
+        <div class="main-body-inner plants">
+          <img src="./assets/images/plants.png" alt="Flower" />
+        </div>
+      </div>
+
+      <div class="content" id="shop">
+        <div class="content-side-panel">
+          <div class="content-side-panel-filters">
+            <!--  -->
+            <div class="filter-container">
+              <h3 class="filter-name">Categories</h3>
+              <div class="name-quantity-filter-list">
+                <div class="list-content-name">
+                  <ul>
+                    <li>
+                      <div>
+                        <a class="name" href="#">House Plants</a>
+                        <a class="quantity" href="#">(10)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Potter Plants</a>
+                        <a class="quantity" href="#">(12)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Seeds</a>
+                        <a class="quantity" href="#">(65)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Small Plants</a>
+                        <a class="quantity" href="#">(39)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Big Plants</a>
+                        <a class="quantity" href="#">(23)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Succulents</a>
+                        <a class="quantity" href="#">(17)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Trerrariums</a>
+                        <a class="quantity" href="#">(19)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Gardening</a>
+                        <a class="quantity" href="#">(13)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Accessories</a>
+                        <a class="quantity" href="#">(18)</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="filter-container" id="filter-container-price">
+              <h3 class="filter-name">Price Range</h3>
+              <div class="price-range">
+                <ul>
+                  <li>
+                    <input
+                      type="range"
+                      min="39"
+                      max="1230"
+                      value="1000"
+                      class="slider"
+                    />
+                  </li>
+                  <li class="price">Price: <span>$39 - $1230</span></li>
+                  <li>
+                    <a href="#" class="filter-button">Filter</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--  -->
+            <div class="filter-container">
+              <h3 class="filter-name">Size</h3>
+              <div class="name-quantity-filter-list">
+                <div class="list-content-name">
+                  <ul>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Small</a>
+                        <a class="quantity" href="#">(119)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Medium</a>
+                        <a class="quantity" href="#">(86)</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a class="name" href="#">Large</a>
+                        <a class="quantity" href="#">(78)</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-side-panel-ads">
+            <h3 class="ads-text">Up to 75% off</h3>
+          </div>
+        </div>
+        <!-- Upper navigation elements -->
+        <div class="main-content">
+          <div class="main-content-nav">
+            <div class="main-content-nav-buttons">
+              <ul>
+                <li>
+                  <a class="main-content-nav-button" href="#">All plants</a>
+                </li>
+                <li>
+                  <a class="main-content-nav-button" href="#">New Arrivals</a>
+                </li>
+                <li><a class="main-content-nav-button" href="#">Sale</a></li>
+              </ul>
+            </div>
+            <div class="main-content-nav-sorting">
+              <p>
+                <label for="sorting">Sort by:</label>
+                <select id="sorting" name="sort">
+                  <option value="default">Default sorting</option>
+                  <option value="ascending">From cheaper</option>
+                  <option value="descending">From expensive</option>
+                  <option value="abc">By name</option>
+                </select>
+              </p>
+            </div>
+          </div>
+          <!-- Products display -->
+          <div class="products">
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_1.png" alt="" />
+                </a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Barberton Daisy</li>
+                  <li class="item-price">$119.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_2.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Angel Wing Begonia</li>
+                  <li class="item-price">$169.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <button class="discount-button">13% OFF</button>
+                <a href="#">
+                  <img src="./assets/images/plants/plant_3.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">African Violet</li>
+                  <li class="item-price">
+                    <div>
+                      <span>$199.00</span>
+                      <span class="old-price">$229.00</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_4.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Beach Spider Lily</li>
+                  <li class="item-price">$129.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_5.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Blushing Bromeliad</li>
+                  <li class="item-price">$139.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_6.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Aluminum Plant</li>
+                  <li class="item-price">$179.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_7.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Bird's Nest Fern</li>
+                  <li class="item-price">$99.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_8.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Broadleaf Lady Palm</li>
+                  <li class="item-price">$59.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="products-item">
+              <div class="products-item-image">
+                <a href="#">
+                  <img src="./assets/images/plants/plant_9.png" alt=""
+                /></a>
+                <div class="shopping-icons">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/cart_product.png"
+                          alt="Cart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/heart_product.png"
+                          alt="Heart product"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          src="./assets/images/search_product.png"
+                          alt="Search product"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="products-item-text">
+                <ul>
+                  <li class="item-name">Chinese Evergreen</li>
+                  <li class="item-price">$39.00</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <ul>
+              <li>
+                <a class="pagination-square" id="active-page" href="#">1</a>
+              </li>
+              <li>
+                <a class="pagination-square" href="#">2</a>
+              </li>
+              <li>
+                <a class="pagination-square" href="#">3</a>
+              </li>
+              <li>
+                <a class="pagination-square" href="#">4</a>
+              </li>
+              <li>
+                <a class="pagination-square" href="#">></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
