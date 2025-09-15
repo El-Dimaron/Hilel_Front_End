@@ -32,26 +32,6 @@
   font-display: swap;
 }
 
-/* @font-face {
-  src: url(../fonts/CeraPro-Regular.ttf);
-  font-family: CeraPro-Regular;
-}
-
-@font-face {
-  src: url(../fonts/CeraPro-Medium.ttf);
-  font-family: CeraPro-Medium;
-}
-
-@font-face {
-  src: url(../fonts/CeraPro-Bold.ttf);
-  font-family: CeraPro-Bold;
-}
-
-@font-face {
-  src: url(../fonts/CeraPro-Black.ttf);
-  font-family: CeraPro-Black;
-} */
-
 html,
 body {
   font-family: "Cera Pro", Roboto;
@@ -102,7 +82,6 @@ header {
 .header-navigation-link:hover {
   border-bottom: 2px solid green;
   font-weight: 700;
-  /* font-family: CeraPro-Bold; */
 }
 
 .icon-button {
@@ -204,7 +183,6 @@ main {
 .main-body-better-planet-title {
   font-size: 70px;
   font-weight: 900;
-  /* font-family: CeraPro-Black; */
   color: #3d3d3d;
   margin-top: 7px;
 }
@@ -281,16 +259,19 @@ main {
   justify-content: space-between;
 }
 
+.list-content-name a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-content-name a:hover {
+  color: #46a358;
+  font-weight: 700;
+}
+
 .name-quantity-filter-list a {
   color: #000000;
   border-bottom: 2px solid transparent;
-}
-
-.list-content-name div:hover .name,
-.list-content-name div:hover .quantity {
-  color: #46a358;
-  font-weight: 700;
-  /* font-family: CeraPro-Bold; */
 }
 
 .name-quantity-filter-list ul {
@@ -320,12 +301,10 @@ main {
 .price span {
   color: #46a358;
   font-weight: 700;
-  /* font-family: CeraPro-Bold; */
 }
 
 .filter-name {
   font-weight: 700;
-  /* font-family: CeraPro-Bold; */
   color: #3d3d3d;
   margin-bottom: 5px;
 }
@@ -355,7 +334,6 @@ main {
   border-radius: 6px;
   color: white;
   font-weight: 700;
-  /* font-family: CeraPro-Bold; */
   text-decoration: none;
 }
 
