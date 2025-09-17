@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <title>Login</title>
+    <title>Register</title>
   </head>
   <body>
     <header>
@@ -61,12 +61,12 @@
 
     <div class="register-background">
       <h2 class="title-buttons">
-        <span class="green-button">Login</span>
-        <a class="grey-button" href="./register.html">| Register</a>
+        <a class="grey-button" href="./login.html">Login |</a>
+        <span class="green-button">Register</span>
       </h2>
 
       <div class="register-forms">
-        <h3>Enter your email and password to login.</h3>
+        <h3>Enter your email and password to register.</h3>
 
         <form>
           <ul>
@@ -74,7 +74,13 @@
               <input type="text" placeholder="Username" />
             </li>
             <li class="register-form">
+              <input type="text" placeholder="Enter your email address" />
+            </li>
+            <li class="register-form">
               <input type="password" placeholder="Password" />
+            </li>
+            <li class="register-form">
+              <input type="password" placeholder="Confirm Password" />
             </li>
             <li>
               <button
@@ -82,7 +88,7 @@
                 type="submit"
                 onclick="alert('You have been successfully logged in, kind sir!')"
               >
-                Login
+                Register
               </button>
             </li>
           </ul>
