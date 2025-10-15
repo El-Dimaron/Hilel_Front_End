@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a class="header-logo" href="./index.html">
+          <svg class="logo-image">
+            <use href="./assets/images/icons/sprite.svg#logo"></use>
+          </svg>
+        </a>
+
+        <nav class="header-navigation">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-item">
+              <a class="header-navigation-link" href="./index.html">Home</a>
+            </li>
+            <li class="header-navigation-item">
+              <a class="header-navigation-link" href="#shop">Shop</a>
+            </li>
+            <li class="header-navigation-item">
+              <a class="header-navigation-link" href="#">Plant&nbsp;Care</a>
+            </li>
+            <li class="header-navigation-item">
+              <a class="header-navigation-link" href="#">Blogs</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-misc">
+          <ul class="header-misc-list">
+            <li>
+              <a class="icon-button" href="#">
+                <svg class="icon-svg-header">
+                  <use
+                    href="./assets/images/icons/sprite.svg#icon-search"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-button" href="#">
+                <svg class="header-cart" id="header-cart">
+                  <use href="./assets/images/icons/sprite.svg#icon-cart"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="./login.html" class="header-sign-in-button">Sign in</a>
+            </li>
+            <li>
+              <a href="./register.html" class="header-register-button">
+                <span>Sign up</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="register-background">
+      <h2 class="title-buttons">
+        <span class="title-active-button">Login</span>
+        <a class="title-inactive-button" href="./register.html">| Register</a>
+      </h2>
+
+      <div class="register-forms">
+        <h3>Enter your email and password to login.</h3>
+
+        <form>
+          <ul>
+            <li class="register-form">
+              <input type="text" placeholder="Username" />
+            </li>
+            <li class="register-form">
+              <input type="password" placeholder="Password" />
+            </li>
+            <li>
+              <button
+                class="register-button"
+                type="submit"
+                onclick="alert('You have been successfully logged in, kind sir!')"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <div class="other-sign-in-services">
+        <div class="register-with">
+          <ul>
+            <li><div class="line"></div></li>
+            <li>Or login via</li>
+            <li><div class="line"></div></li>
+          </ul>
+        </div>
+
+        <ul>
+          <li class="other-services-button">
+            <a href="https://www.google.com/">
+              <div>
+                <img
+                  src="./assets/images/icons/google_logo.png"
+                  alt="Google logo"
+                  style="width: 20px"
+                />
+                Continue with Google
+              </div>
+            </a>
+          </li>
+          <li class="other-services-button">
+            <a href="https://www.facebook.com/">
+              <div>
+                <img
+                  src="./assets/images/icons/facebook_logo.png"
+                  alt="Facebook logo"
+                  style="width: 20px"
+                />
+                Continue with Facebook
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--  -->
+    </div>
+  </body>
+</html>
