@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <script src="./assets/scripts/script.js" defer></script>
     <title>About page</title>
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="header-logo">
+          <!-- 
+          
+          -->
+          <!-- Adaptive Start -->
+          <button
+            class="nav-toggle"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+          >
+            <svg
+              class="nav-toggle__icon"
+              viewBox="0 0 24 24"
+              width="28"
+              height="28"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 6h18M3 12h18M3 18h18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <!-- Adaptive End -->
+          <!-- 
+          
+          
+           -->
           <a class="header-logo-link" href="./about.html">
             <svg class="header-logo-image">
               <use
@@ -21,9 +52,12 @@
           </a>
         </div>
         <div class="header-misc">
+          <!-- Upper Part -->
           <div class="header-misc-upper">
             <ul class="header-misc-upper-list">
-              <li class="header-misc-upper-list-item">
+              <li
+                class="header-misc-upper-list-languages header-language-button"
+              >
                 <div class="header-misc-upper-list-button">УК</div>
                 <div class="header-misc-upper-list-button">РУ</div>
                 <div class="header-misc-upper-list-button active">EN</div>
@@ -31,16 +65,119 @@
               <li class="header-misc-upper-list-item">
                 <span>Kyiv, Mechnikova str, 14/1</span>
               </li>
-              <li class="header-misc-upper-list-item">
+              <li class="header-misc-upper-list-item" id="header-phone-number">
                 <span>0800 211 927</span>
               </li>
-              <li class="header-misc-upper-list-item"><span>Logo</span></li>
+              <li class="header-misc-upper-list-item">
+                <svg class="header-facebook-logo">
+                  <use
+                    href="./assets/images/icons/sprite.svg#header-facebook-logo"
+                  ></use>
+                </svg>
+              </li>
             </ul>
           </div>
-          <div class="header-misc-lower"></div>
+          <!-- Lower Part -->
+          <div class="header-misc-lower">
+            <ul class="header-misc-lower-list">
+              <li class="header-misc-lower-list-item active">about us</li>
+              <li class="header-misc-lower-list-item">services</li>
+              <li class="header-misc-lower-list-item">team</li>
+              <li class="header-misc-lower-list-item">publications</li>
+              <li class="header-misc-lower-list-item">contact</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <!-- Adaptive: Navigation Modal Window -->
+      <div id="mobile-nav" class="mobile-nav" hidden>
+        <div class="mobile-nav__scrim" data-close></div>
+        <div
+          class="mobile-nav__sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-nav-title"
+        >
+          <button class="mobile-nav__close" aria-label="Close menu" data-close>
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+              <path
+                d="M6 6l12 12M18 6L6 18"
+                stroke="#F0145A"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <ul class="mobile-nav__list">
+            <li><a class="mobile-nav__item is-active" href="#">about us</a></li>
+            <li><a class="mobile-nav__item" href="#">послуги</a></li>
+            <li><a class="mobile-nav__item" href="#">команда</a></li>
+            <li><a class="mobile-nav__item" href="#">публікації</a></li>
+            <li><a class="mobile-nav__item" href="#">контакти</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--  -->
     </header>
-    <footer></footer>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-container-upper">
+          <div class="footer-container-upper-left">
+            <ul class="footer-container-list">
+              <li class="footer-container-list-item">
+                Kyiv, Mechnikova str, 14/1
+              </li>
+              <li class="footer-container-list-item">
+                <svg class="footer-container-dot-separator">
+                  <use
+                    href="./assets/images/icons/sprite.svg#dot-separator"
+                  ></use>
+                </svg>
+              </li>
+              <li>
+                <span><a href="#" id="on-map-link">ON MAP</a></span>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-container-upper-right" id="footer-signature">
+            <span>© 2025 HLEGAL Law company, LLC</span>
+          </div>
+        </div>
+
+        <div class="footer-container-lower">
+          <ul class="footer-container-list">
+            <li class="footer-container-list-item">
+              <svg class="footer-facebook-logo">
+                <use
+                  href="./assets/images/icons/sprite.svg#header-facebook-logo"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer-container-list-item">
+              <svg class="footer-container-dot-separator">
+                <use
+                  href="./assets/images/icons/sprite.svg#dot-separator"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer-container-list-item" id="footer-phone-number">
+              0800 211 927
+            </li>
+            <li class="footer-container-list-item">
+              <svg class="footer-container-dot-separator">
+                <use
+                  href="./assets/images/icons/sprite.svg#dot-separator"
+                ></use>
+              </svg>
+            </li>
+            <li class="footer-container-list-item" id="footer-email">
+              contact@forstudy.space
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
