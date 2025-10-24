@@ -26,6 +26,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .header-logo-image {
@@ -160,6 +161,188 @@ main {
   display: block;
 }
 
+/* About Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 60px;
+}
+
+.about-moto {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 180px;
+  gap: 30px;
+}
+
+.about-moto-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+  flex: 2 1 0;
+}
+
+.about-moto-text-title,
+.about-quality-title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 50px;
+  background: linear-gradient(86deg, #f0145a, #ef8080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-moto-figures-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.about-moto-figures-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.about-moto-figures-list-item-title {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+
+.about-moto-figures-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.about-moto-figures-list-item-text {
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(86deg, #f0145a, #ef8080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-moto-text-paragraph,
+.about-quality-paragraph {
+  font-size: 19px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.about-moto-figures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-left: 30px;
+  border-left: 4px solid #e6e6f0;
+  flex: 1 1 0;
+}
+
+.about-moto-figures-list-item-paragraph {
+  font-size: 16px;
+  color: #323264;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-quality {
+  display: flex;
+  padding: 0 180px;
+  gap: 60px;
+}
+
+.about-quality-paragraph {
+  flex: 2 1 0;
+}
+
+.about-quality-title {
+  flex: 1 1 0;
+}
+
+.about-lower {
+  background-color: #f5f5fa;
+}
+
+.about-achievements {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding: 30px 60px; */
+  padding: 2% 4%;
+  gap: 30px;
+  background-color: #f5f5fa;
+}
+
+.about-achievements-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #323264;
+}
+
+.about-achievements-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.about-achievements-items-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  max-width: 370px;
+  height: 110px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.about-achievements-items-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.about-achievements-circles {
+  display: flex;
+  gap: 15px;
+}
+
+.about-achievements-circles-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  fill: #24a3ff33;
+}
+
+.about-achievements-circles-icon:hover {
+  fill: #0085ff99;
+}
+
+.about-achievements-circles-icon.active {
+  fill: #006ccf;
+}
+
 /* Footer */
 
 footer {
@@ -172,12 +355,14 @@ footer {
   flex-direction: column;
   gap: 21px;
   background-color: #f5f5fa;
-  padding: 30px 60px;
+  padding: 0 60px 30px 60px;
 }
 
 .footer-container-upper {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  border-top: 5px solid #e6e6f0;
 }
 
 .footer-container-list {
@@ -244,7 +429,7 @@ footer {
 
 /* Adaptive */
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .header-container {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -256,8 +441,6 @@ footer {
     justify-content: flex-start;
   }
 
-  /* make the .header-misc wrapper “disappear” so its children
-     (upper & lower) become FLEX ITEMS of header-container */
   .header-misc {
     display: contents;
   }
@@ -283,6 +466,20 @@ footer {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+  }
+
+  .about-moto,
+  .about-quality {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Stopped here */
+  /* TODO */
+  .about-achievements-items-container {
+    min-width: 100px;
+    max-width: 370px;
+    height: 110px;
   }
 
   .footer-container {
@@ -314,7 +511,7 @@ footer {
 
 */
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .header-container {
     display: flex;
     flex-direction: column;
