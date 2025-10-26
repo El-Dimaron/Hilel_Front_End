@@ -22,7 +22,7 @@ main {
 
 .header-container {
   width: 100%;
-  padding: 50px 60px 0 60px;
+  padding: 3% 4% 0 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,6 +131,7 @@ main {
 }
 
 .header-misc-lower-list-item {
+  display: inline-block;
   font-size: 16px;
   font-weight: 700;
   color: #24a3ff;
@@ -174,7 +175,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 180px;
+  padding: 0 12%;
   gap: 30px;
 }
 
@@ -263,7 +264,7 @@ main {
 
 .about-quality {
   display: flex;
-  padding: 0 180px;
+  padding: 0 12%;
   gap: 60px;
 }
 
@@ -284,8 +285,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* padding: 30px 60px; */
-  padding: 2% 4%;
+  padding: 30px 4%;
   gap: 30px;
   background-color: #f5f5fa;
 }
@@ -328,6 +328,10 @@ main {
   gap: 15px;
 }
 
+.about-achievements-circle-item.hidden {
+  display: none;
+}
+
 .about-achievements-circles-icon {
   width: 16px;
   height: 16px;
@@ -347,6 +351,8 @@ main {
 
 footer {
   margin-top: auto;
+  background-color: #f5f5fa;
+  padding: 0 4% 2% 4%;
 }
 
 .footer-container {
@@ -354,15 +360,13 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 21px;
-  background-color: #f5f5fa;
-  padding: 0 60px 30px 60px;
+  border-top: 2px solid #e6e6f0;
+  padding-top: 2%;
 }
 
 .footer-container-upper {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  border-top: 5px solid #e6e6f0;
 }
 
 .footer-container-list {
@@ -474,8 +478,6 @@ footer {
     gap: 30px;
   }
 
-  /* Stopped here */
-  /* TODO */
   .about-achievements-items-container {
     min-width: 100px;
     max-width: 370px;
@@ -487,10 +489,12 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5%;
   }
 
   .footer-container-upper {
     display: contents;
+    border-top: 5px solid #e6e6f0;
   }
 
   .footer-container-upper-left {
@@ -638,6 +642,19 @@ footer {
 
   .mobile-nav__item.is-active {
     color: #f0145a;
+  }
+
+  .about-achievements-items {
+    justify-content: center;
+  }
+
+  .about-achievements-items
+    .about-achievements-items-container:not(:first-child) {
+    display: none;
+  }
+
+  .about-achievements-circle-item.hidden {
+    display: block;
   }
 
   .footer-container-list {
